@@ -8,11 +8,12 @@ function loadData() {
 	console.warn("Loading...");
 	exports = {};
 	exports.BattlePokedex = {};
-	$.getJSON(saveLocal + "pokedex.js?callback=?", function(data) {
+	$.getJSON(saveLocal + "pokedex.js", function(data) {
 		console.warn("Loaded.");
 		pokedexJSON = data;
 		displayTable();
 	});
+	console.warn(exports.BattlePokedex);
 }
 
 function displayTable() {
