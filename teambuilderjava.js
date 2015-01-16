@@ -9,6 +9,7 @@ function loadData() {
 	exports = {};
 	exports.BattlePokedex = {};
 	$.getJSON(saveLocal + "pokedex.js", function(data) {
+		console.warn("Loaded.");
 		pokedexJSON = data;
 		displayTable();
 	});
