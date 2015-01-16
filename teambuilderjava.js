@@ -5,6 +5,7 @@ loadData();
 
 function loadData() {
 	$.getJSON(saveLocal + "pokedex.js?callback=?", function(data) {
+		console.warn("asd");
 		pokedexJSON = data;
 		displayTable();
 	});
