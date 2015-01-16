@@ -5,7 +5,7 @@ loadData();
 
 function loadData() {
 	console.warn("Loading...");
-	$.getJSON(saveLocal + "pokedex.js?callback=?", function(data) {
+	$.getJSON(saveLocal + "pokedex.js?jsoncallback=?", function(data) {
 		console.warn("Loaded.");
 		pokedexJSON = jQuery.parseJSON(data);
 		displayTable();
