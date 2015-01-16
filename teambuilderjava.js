@@ -6,15 +6,27 @@ var exports;
 
 function loadData() {
 	console.warn("Loading...");
+
+
+	$.getJSON("test.js", function(data) {
+		console.warn("Loaded.");
+		pokedexJSON = data;
+		displayTable();
+	});
+
+}
+
+/*function loadData() {
+	console.warn("Loading...");
 	exports = {};
 	exports.BattlePokedex = {};
-	$.getJSON(saveLocal + "pokedex.js", function(data) {
+	$.getJSON(saveLocal + "pokedex.js", function(exports) {
 		console.warn("Loaded.");
 		pokedexJSON = data;
 		displayTable();
 	});
 	console.warn(exports.BattlePokedex[0]);
-}
+}*/
 
 function displayTable() {
 
