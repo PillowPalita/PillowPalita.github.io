@@ -6,6 +6,7 @@ var exports;
 
 function loadData() {
 	console.warn("Loading...");
+	exports.BattlePokedex = "";
 	$.getJSON(saveLocal + "pokedex.js?jsoncallback=?", function(data) {
 		console.warn("Loaded.");
 		pokedexJSON = data;
