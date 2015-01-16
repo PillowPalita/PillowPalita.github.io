@@ -1,4 +1,4 @@
-var saveLocal = "http//raw.githubusercontent.com/Zarel/Pokemon-Showdown/master/data/";
+var saveLocal = "//raw.githubusercontent.com/Zarel/Pokemon-Showdown/master/data/";
 var pokedexJSON;
 
 loadData();
