@@ -4,7 +4,7 @@ var pokedexJSON;
 loadData();
 
 function loadData() {
-	$.get(saveLocal + "pokedex.js", function(data) {
+	$.getJSON(saveLocal + "pokedex.js", function(data) {
 		console.warn("asd");
 		pokedexJSON = jQuery.parseJSON(data);
 		displayTable();
