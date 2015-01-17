@@ -9,7 +9,7 @@ function loadData() {
 	console.warn("Loading...");
 
 $(document).ready(
-	$.get("test.js", function(data) {
+	$.get(saveLocal + "pokedex.js", function(data) {
 		console.warn("Loaded. " + data);
 		eval(data);
 		console.warn(exports);
