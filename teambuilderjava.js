@@ -3,7 +3,7 @@ var pokedexJSON;
 
 loadData();
 var exports;
-var data;
+
 
 function loadData() {
 	console.warn("Loading...");
