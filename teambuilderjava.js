@@ -11,7 +11,7 @@ $(document).ready(
 	$.get("test.js", function(data) {
 		console.warn("Loaded.");
 		pokedexJSON = data;
-		console.warn(data);
+		eval(data);
 		displayTable();
 	}));
 
