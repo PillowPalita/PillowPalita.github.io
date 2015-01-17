@@ -1,9 +1,9 @@
 var saveLocal = "//cdn.rawgit.com/Zarel/Pokemon-Showdown/master/data/";
 var pokedexJSON;
 
-loadData();
-var exports;
 
+var exports;
+loadData();
 
 function loadData() {
 	console.warn("Loading...");
