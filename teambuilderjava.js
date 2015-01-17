@@ -31,7 +31,7 @@ $(document).ready(
 }*/
 
 function displayTable() {
-
+	console.warn(exports.success);
 	$.each(exports, function(idx, obj) {
 		$.append("<p>" + obj+"</p>");
 	});
