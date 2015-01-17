@@ -12,7 +12,7 @@ $(document).ready(
 	$.get("test.js", function(data) {
 		console.warn("Loaded. " + data);
 		eval(data);
-		console.warn(data);
+		console.warn(exports);
 		//displayTable();
 	}));
 
