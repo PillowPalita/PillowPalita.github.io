@@ -32,7 +32,7 @@ $(document).ready(
 
 function displayTable() {
 
-	$.each(data, function(idx, obj) {
+	$.each(exports, function(idx, obj) {
 		$.append("<p>" + obj+"</p>");
 	});
 
