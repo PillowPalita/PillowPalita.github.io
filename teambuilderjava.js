@@ -8,9 +8,10 @@ function loadData() {
 	console.warn("Loading...");
 
 $(document).ready(
-	$.getJSON("test.js", function(data) {
+	$.get("test.js", function(data) {
 		console.warn("Loaded.");
 		pokedexJSON = data;
+		console.warn(data);
 		displayTable();
 	}));
 
