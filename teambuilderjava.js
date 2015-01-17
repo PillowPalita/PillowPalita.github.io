@@ -13,7 +13,7 @@ $(document).ready(
 		console.warn("Loaded.");
 		pokedexJSON = data;
 		eval(data);
-		console.warn(exports.success);
+		console.warn(data);
 		//displayTable();
 	}));
 
