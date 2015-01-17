@@ -13,7 +13,8 @@ $(document).ready(
 		console.warn("Loaded.");
 		pokedexJSON = data;
 		eval(data);
-		displayTable();
+		console.warn(exports.success);
+		//displayTable();
 	}));
 
 }
@@ -31,7 +32,7 @@ $(document).ready(
 }*/
 
 function displayTable() {
-	console.warn(exports.success);
+
 	$.each(exports, function(idx, obj) {
 		$.append("<p>" + obj+"</p>");
 	});
