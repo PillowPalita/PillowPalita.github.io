@@ -7,12 +7,12 @@ var exports;
 function loadData() {
 	console.warn("Loading...");
 
-
+$(document).ready(
 	$.getJSON("test.js", function(data) {
 		console.warn("Loaded.");
 		pokedexJSON = data;
 		displayTable();
-	});
+	}));
 
 }
 
