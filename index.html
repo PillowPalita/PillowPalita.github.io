@@ -13,7 +13,19 @@
 </head>
 <body>
 
-<h1 id="title"> O Soos é noob </h1>
+<button onclick="orderBy('num')">Number</button>
+<button onclick="orderBy('name')">Name</button>
+<button onclick="orderBy('baseStats.hp')">HP</button>
+<button onclick="orderBy('baseStats.atk')">Attack</button>
+<button onclick="orderBy('baseStats.def')">Defense</button>
+<button onclick="orderBy('baseStats.spa')">Sp.Attack</button>
+<button onclick="orderBy('baseStats.spd')">Sp.Defense</button>
+<button onclick="orderBy('baseStats.spe')">Speed</button>
+<button onclick="reverseOrder()">reverse</button> <!-- order reversing needs to be better and different -->
+<input type="text" id="pkmName" />
+<p>Missing Order By: abilities</p>
+
+<div id="list"></div>
 
 <!-- DATA -->
 <script type="text/javascript" src="data/pokedex.js"></script>
