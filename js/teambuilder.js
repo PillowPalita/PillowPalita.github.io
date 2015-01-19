@@ -91,7 +91,7 @@ function displayTable(dex) {
 		str = str.toLowerCase();
 		$('#list').append('<h2>Ability Details</h2>');
 		$.each(keys, function(key, value) {
-			$.each(values[value].abilities, function(key, innerValue) { //breaks if not pokedex
+			$.each(values[value].abilities, function(key, innerValue) {
 				if (innerValue.toLowerCase().indexOf(str) > -1) {
 					drawRow(value, values[value]);
 					return false;
@@ -102,7 +102,7 @@ function displayTable(dex) {
 }
 //writes data to #list
 function drawRow(key, value) {
-	if (value.forme == null) { //avoids megas and event pokemon from being drawn
+	if (typeof value.formeLetter == null || value.formeLetter !== 'M') { //avoids megas and event pokemon from being drawn
 		var str = '<p style="border:1px dashed cyan">' + key + ':';
 		$.each(value, function(key, value) {
 			try {
