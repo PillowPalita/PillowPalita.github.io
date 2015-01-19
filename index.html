@@ -8,29 +8,53 @@
     	var exports = {};
     </script>
 
-
-    
 </head>
 <body>
 
-<button onclick="orderBy('num')">Number</button>
-<button onclick="orderBy('name')">Name</button>
-<button onclick="orderBy('baseStats.hp')">HP</button>
-<button onclick="orderBy('baseStats.atk')">Attack</button>
-<button onclick="orderBy('baseStats.def')">Defense</button>
-<button onclick="orderBy('baseStats.spa')">Sp.Attack</button>
-<button onclick="orderBy('baseStats.spd')">Sp.Defense</button>
-<button onclick="orderBy('baseStats.spe')">Speed</button>
-<button onclick="reverseOrder()">reverse</button> <!-- order reversing needs to be better and different -->
-<input type="text" id="pkmName" />
+<div>
+	<span>Pick Display</span>
+	<select id="displayMode">
+		<option>Pokedex</option>
+		<option>Movedex</option>
+		<option>Items</option>
+		<option>Abilities</option>
+	</select>
+</div>
+
+<div id="pokemonOrdering">
+	<span>Pokemon</span>
+	<button onclick="orderBy('num')">Number</button> <!-- OnClick is shit as is -->
+	<button onclick="orderBy('name')">Name</button>
+	<button onclick="orderBy('baseStats.hp')">HP</button>
+	<button onclick="orderBy('baseStats.atk')">Attack</button>
+	<button onclick="orderBy('baseStats.def')">Defense</button>
+	<button onclick="orderBy('baseStats.spa')">Sp.Attack</button>
+	<button onclick="orderBy('baseStats.spd')">Sp.Defense</button>
+	<button onclick="orderBy('baseStats.spe')">Speed</button>
+	<button onclick="reverseOrder()">reverse</button> <!-- order reversing needs to be better and different -->
+	<input type="text" id="PokedexSearch" />
+</div>
+
+<div id="movesOrdering">
+	<span>Moves</span>
+	<button onclick="moveOrderBy('num')">Number</button> <!-- OnClick not implemented -->
+	<button onclick="moveOrderBy('name')">Name</button> <!-- OnClick is shit as is -->
+	<button onclick="moveOrderBy('baseStats.hp')">Accuracy</button>
+	<button onclick="moveOrderBy('baseStats.atk')">Base Power</button>
+	<button onclick="moveOrderBy('baseStats.def')">Type</button>
+	<button onclick="moveReverseOrder()">reverse</button> <!-- order reversing needs to be better and different -->
+	<input type="text" id="MovedexSearch" />
+</div>
+
 <p>Missing Order By: abilities</p>
 
 <div id="list"></div>
 
 <!-- DATA -->
 <script type="text/javascript" src="data/pokedex.js"></script>
+<script type="text/javascript" src="data/moves.js"></script>
 
-<!-- DATA -->
+<!-- Engine -->
 <script type="text/javascript" src="js/teambuilder.js"></script>
 
 </body>

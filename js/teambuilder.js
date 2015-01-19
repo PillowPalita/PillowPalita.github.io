@@ -1,9 +1,12 @@
 //on load script
 cleanLoadSetKeys();
 
-$('#pkmName').on('input',function(){ //pokemon search name handler
-	//change #pkmName to affect a different input
-	displayTable();
+
+$('#PokedexSearch').on('input', onInput);
+$('#MovedexSearch').on('input', onInput);
+
+$('#displayMode').on('change', function(){
+	displayTable(this.value);
 });
 
 
@@ -13,11 +16,19 @@ displayTable();
 
 
 function cleanLoadSetKeys() {
+	//Pokedex
 	exports.BattlePokedexKeys = [];
-	var p = exports.BattlePokedex;
-	for(var key in p)
-		if (p[key].num > 0)
-			exports.BattlePokedexKeys.push(key);
+	loadKeySet(exports.BattlePokedexKeys, exports.BattlePokedex);
+	//movedex
+	exports.BattleMovedexKeys = [];
+	loadKeySet(exports.BattleMovedexKeys, exports.BattleMovedex);
+
+}
+
+function loadKeySet(keyHolder, obj) {
+	for(var key in obj)
+		if (obj[key].num > 0)
+			keyHolder.push(key);
 }
 
 function sortKeys(keysToSort, container, type) {
@@ -54,18 +65,40 @@ function swap(container, i) {
     container[i+1] = tmp;
 }
 
-function displayTable() {
+function displayTable(dex) {
 	$('#list').empty();
-	var str = $('#pkmName').val();
-	if (str === '')
-		$.each(exports.BattlePokedexKeys, function(key, value) {
-			drawRow(value, exports.BattlePokedex[value]);
+	if (typeof dex == 'undefined') {
+		var str = $('#PokedexSearch').val();
+		dex = 'Pokedex';
+	} else {
+		var str = $('#'+ dex + 'Search').val(); //only works with a single movedex figure out 4
+		
+	}
+	var keys = exports['Battle' + dex + 'Keys'];
+	var values = exports['Battle' + dex];
+	
+	if (typeof str == 'undefined' || str == ''){
+		$.each(keys, function(key, value) {
+			drawRow(value, values[value]);
 		});
-	else //limits displayed data to that in #pkmName
-		$.each(exports.BattlePokedexKeys, function(key, value) {
+	} else {//limits displayed data to that in #pkmName
+		$('#list').append('<h2>Details</h2>');
+		$.each(keys, function(key, value) {
 			if (value.indexOf(str) > -1)
-				drawRow(value, exports.BattlePokedex[value]);
+				drawRow(value, values[value]);
 		});
+
+		//abilities match
+		$('#list').append('<h2>Ability Details</h2>');
+		$.each(keys, function(key, value) {
+			$.each(values[value].abilities, function(key, innerValue) { //breaks if not pokedex
+				if (innerValue.indexOf(str) > -1) {
+					drawRow(value, values[value]);
+					return false;
+				}
+			});
+		});
+	}
 }
 
 function drawRow(key, value) {
@@ -109,3 +142,10 @@ function reverseOrder() {
 	exports.BattlePokedexKeys.reverse();
 	displayTable();
 }
+
+
+
+function onInput(){ 
+	console.log(this.id);
+	displayTable(this.id.replace('Search', '')); 
+};
