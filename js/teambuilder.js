@@ -88,10 +88,11 @@ function displayTable(dex) {
 		});
 
 		//abilities match
+		str = str.toLowerCase();
 		$('#list').append('<h2>Ability Details</h2>');
 		$.each(keys, function(key, value) {
 			$.each(values[value].abilities, function(key, innerValue) { //breaks if not pokedex
-				if (innerValue.indexOf(str) > -1) {
+				if (innerValue.toLowerCase().indexOf(str) > -1) {
 					drawRow(value, values[value]);
 					return false;
 				}

@@ -123,30 +123,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 2171,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/teambuilder.js",
-			"settings":
-			{
-				"buffer_size": 3723,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/items.js",
-			"settings":
-			{
-				"buffer_size": 112480,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/User/chrome.sublime-build",
 	"command_palette":
@@ -192,9 +168,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Jey/Desktop/Webtest",
-		"/C/Users/Jey/Desktop/Webtest/data",
-		"/C/Users/Jey/Desktop/Webtest/js"
+		"/C/Users/Jey/repos/Pokemon Wars"
 	],
 	"file_history":
 	[
@@ -463,99 +437,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1993,
-								1993
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 675.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/teambuilder.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3723,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3653,
-								3653
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1561.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "data/items.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 112480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -598,7 +481,7 @@
 	{
 		"height": 0.0
 	},
-	"project": "showdown.sublime-project",
+	"project": "Pokemon Wars.sublime-project",
 	"replace":
 	{
 		"height": 62.0
