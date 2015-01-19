@@ -14,23 +14,21 @@ $('#displayMode').on('change', function(){
 displayTable();
 
 
-
+///loads all necessary keys
 function cleanLoadSetKeys() {
-	//Pokedex
-	exports.BattlePokedexKeys = [];
-	loadKeySet(exports.BattlePokedexKeys, exports.BattlePokedex);
-	//movedex
-	exports.BattleMovedexKeys = [];
-	loadKeySet(exports.BattleMovedexKeys, exports.BattleMovedex);
-
+	var list = ['Pokedex', 'Movedex', 'Items', 'Abilities'];
+	$.each(list, function(key,value){
+		loadKeySet(exports['Battle' + value + 'Keys'] = [], exports['Battle' + value]);
+	});
 }
-
+///assists cleanLoadSetKeys()
 function loadKeySet(keyHolder, obj) {
 	for(var key in obj)
 		if (obj[key].num > 0)
 			keyHolder.push(key);
 }
 
+//sorts by assigned data path
 function sortKeys(keysToSort, container, type) {
 	var i, tmp;
 	if (type == '')
@@ -51,7 +49,7 @@ function sortKeys(keysToSort, container, type) {
 		}
 }
 
-//bubble sort assistant, for cases where the base value isn't enough
+//bubble sort assistant, for cases where the base path isn't enough
 function deepFind(obj, path){
     for (var i=0,path = path.split('.'), len=path.length; i<len; i++)
         obj = obj[path[i]];
@@ -65,6 +63,7 @@ function swap(container, i) {
     container[i+1] = tmp;
 }
 
+//grabs data and sends it to displayRow
 function displayTable(dex) {
 	$('#list').empty();
 	if (typeof dex == 'undefined') {
@@ -100,7 +99,7 @@ function displayTable(dex) {
 		});
 	}
 }
-
+//writes data to #list
 function drawRow(key, value) {
 	if (value.forme == null) { //avoids megas and event pokemon from being drawn
 		var str = '<p style="border:1px dashed cyan">' + key + ':';
@@ -144,8 +143,7 @@ function reverseOrder() {
 }
 
 
-
-function onInput(){ 
-	console.log(this.id);
+//event for text input
+function onInput(){
 	displayTable(this.id.replace('Search', '')); 
 };
