@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"Ba",
+				"Battle"
+			],
+			[
+				"Poke",
+				"Pokedex"
+			],
+			[
+				"Pokedex",
+				"PokedexSearch"
+			],
+			[
+				"Pok",
+				"PokedexSearch"
+			],
+			[
+				"nu",
+				"null"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
 				"opt",
 				"option	Tag"
 			],
@@ -127,7 +151,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2171,
+				"buffer_size": 2183,
 				"line_ending": "Windows"
 			}
 		},
@@ -135,16 +159,8 @@
 			"file": "js/teambuilder.js",
 			"settings":
 			{
-				"buffer_size": 3723,
+				"buffer_size": 3989,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/items.js",
-			"settings":
-			{
-				"buffer_size": 112480,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -198,6 +214,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Jey/repos/Pokemon Wars/Assets/Model/hexagon.fbx",
+		"/C/Users/Jey/repos/Pokemon Wars/Assets/Scripts/Battle/BattleControl.cs",
 		"/C/Users/Jey/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
 		"/C/Users/Jey/Desktop/Webtest/data/moves.js",
 		"/C/Users/Jey/AppData/Roaming/Sublime Text 3/Packages/User/chrome.sublime-build",
@@ -323,9 +341,7 @@
 		"/C/Users/Jey/Desktop/downloads/Finished/X-Change/X-Change c.txt",
 		"/C/Users/Jey/repos/UnityTools/Assets/Visual Novel/TextEditor/VNNode.cs",
 		"/C/Users/Jey/repos/UnityTools/Assets/Visual Novel/Ideas.txt",
-		"/C/Users/Jey/repos/UnityTools/Assets/Visual Novel/Text/VNGUI.cs",
-		"/C/Users/Jey/AppData/Local/Temp/Rar$DIa0.117/readme.txt",
-		"/C/Users/Jey/Desktop/downloads/Finished/X-Change/X-Change b.txt"
+		"/C/Users/Jey/repos/UnityTools/Assets/Visual Novel/Text/VNGUI.cs"
 	],
 	"find":
 	{
@@ -343,6 +359,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ite",
+			"lite",
+			"formeLetter:\"M",
 			"displayTable()",
 			"play.",
 			"internationalspacepimps",
@@ -463,7 +482,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -472,15 +491,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2171,
+						"buffer_size": 2183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1993,
-								1993
+								1162,
+								1149
 							]
 						],
 						"settings":
@@ -490,10 +509,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 675.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -502,15 +521,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3723,
+						"buffer_size": 3989,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3653,
-								3653
+								3983,
+								3983
 							]
 						],
 						"settings":
@@ -520,37 +539,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1561.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "data/items.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 112480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1702.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

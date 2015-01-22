@@ -1,9 +1,11 @@
+var list = ['Pokedex', 'Movedex', 'Items', 'Abilities'];
+
 //on load script
 cleanLoadSetKeys();
 
-
 $('#PokedexSearch').on('input', onInput);
-$('#MovedexSearch').on('input', onInput);
+
+
 
 $('#displayMode').on('change', function(){
 	displayTable(this.value);
@@ -13,12 +15,15 @@ $('#displayMode').on('change', function(){
 //go go write those pokemons!
 displayTable();
 
+$('#PokedexSearch').focus();
+
 
 ///loads all necessary keys
 function cleanLoadSetKeys() {
-	var list = ['Pokedex', 'Movedex', 'Items', 'Abilities'];
+	
 	$.each(list, function(key,value){
 		loadKeySet(exports['Battle' + value + 'Keys'] = [], exports['Battle' + value]);
+		$('#' + value + 'Search').on('input', onInput);
 	});
 }
 ///assists cleanLoadSetKeys()
@@ -103,7 +108,7 @@ function displayTable(dex) {
 //writes data to #list
 function drawRow(key, value) {
 	if (typeof value.formeLetter == null || value.formeLetter !== 'M') { //avoids megas and event pokemon from being drawn
-		var str = '<p style="border:1px dashed cyan">' + key + ':';
+		var str = "<p class=\"teamBuilderEntry\" onclick=\"pick('" + key + "')\">" + key + ":";
 		$.each(value, function(key, value) {
 			try {
 				if ($.isArray(value)) {
@@ -146,5 +151,24 @@ function reverseOrder() {
 
 //event for text input
 function onInput(){
-	displayTable(this.id.replace('Search', '')); 
+	displayTable(this.id.replace('Search', ''));
 };
+
+
+function pick(key) {
+	var proceed = true;
+
+	$.each(list, function(idx, value) {
+		
+		$.each(exports['Battle' + value + 'Keys'], function(innerKey, innerValue){
+			if (innerValue == key) {
+				console.log("Testing: " + innerValue + " Found: " + value);
+				$('#' + value + 'Search').prop('value', key);
+				proceed = false;
+				return false;	
+			}
+		});
+		if (!proceed)
+			return false;
+	});
+}
